@@ -33,37 +33,31 @@
 
       pip3 install pipenv
 
-### Installing Flask
+### Installing Flask 
 
-- [ ] Install `tailwindcss` via npm, and create your `tailwind.config.js` file.<br><br>
-      npm install -D tailwindcss
-      npx tailwindcss init
-- [ ] Add the paths to all of your template files in your `tailwind.config.js` file.<br><br>
-      **tailwind.config.js**
-      /** @type {import('tailwindcss').Config} */
-      module.exports = {
-        content: ['./src/**/*.{js,jsx,ts,tsx}'],
-        theme: {
-          extend: {},
-        },
-        plugins: [],
-      }
-- [ ] Add the `@tailwind` directives for each of Tailwind’s layers to your `./src/index.css` file.<br><br>
-      **index.css**
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;
 
-### Install [DaisyUI](https://daisyui.com/)
+- [ ] Now that we have pipenv installed, let's create a new project folder and `cd` into it.
 
-- [ ] Install `daisyui` via npm:<br><br>
-      npm install daisyui
-- [ ] Add daisyUI to your `tailwind.config.js` files:<br><br>
-      **tailwind.config.js**
-      module.exports = {
-        //...
-        plugins: [require("daisyui")],
-      }
+- [ ] Once we are in the project folder we can use pipenv to install Flask and any other necessary packages.  
+**Note** : _The first time we run `pipenv install`, it will create 2 files for us, `Pipfile` and `Pipfile.lock`. Both are needed in order to use the installed packages, but difference between the two include: `Pipfile` will display the packages installed, and `Pipfile.lock` will have the specific details on what version is being used._
+  - PyMySQL allows us to connect Flask to a MySQL database
+  - flask-bcrypt allows us to hash passwords
+  <br><br>
+  ```
+  pipenv install flask PyMySQL flask-bcrypt
+  ```
+
+### Activating our Virtual Environment
+
+- [ ] Once we have installed the Flask package, we need to activate our environment in order to use it. We can achieve this with the following command.
+
+      pipenv shell
+
+### Checking What's Installed with `pip list`
+
+- [ ] To check what is installed in your virtual environment, with your virtual environment activated (`pipenv shell`), you can type the command, `pip list` and you will see a list of what is currently installed. For instance if you wanted to verify for a particular project that you have Flask installed you would activate your environment then use this command as shown below.
+
+      pip list
 
 ### Start your build process
 
