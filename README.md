@@ -59,8 +59,3 @@
 
       pip list
 
-### Start your build process
-
-- [ ] Run either of these commands to start your project:<br><br>
-      npm start             // refreshes tab upon saving
-      npx nodemon           // creates new tab upon saving
